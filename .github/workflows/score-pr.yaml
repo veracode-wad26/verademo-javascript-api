@@ -150,7 +150,7 @@ jobs:
             --score ${{ steps.score.outputs.score }} \
             --timestamp "${{ steps.timestamp.outputs.ts }}" \
             --pr-number ${{ github.event.pull_request.number }} \
-            --scanner "package-lock.json" 
+            --scanner "package-lock.json"
 
       - name: Fail check if vulnerabilities remain
         if: ${{ steps.current.outputs.count > 0 }}
