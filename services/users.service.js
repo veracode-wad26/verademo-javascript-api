@@ -4,7 +4,6 @@ const moment = require('moment')
 const util = require('util');
 const speakeasy = require('speakeasy')
 const { error } = require("console");
-const { isJSDocNonNullableType } = require("typescript");
 
 exports.getUsers = (callback) => {
   db.query(

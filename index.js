@@ -4,13 +4,12 @@ const swaggerUi = require("swagger-ui-express");
 const fs = require("fs");
 
 const app = express();
-const bodyParser = require("body-parser");
 const usersRoutes = require("./routes/users.routes");
 const postsRoutes = require("./routes/posts.routes");
 const adminRoutes = require("./routes/admin.routes");
 
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 /** Swagger Initialization - START */
 const swaggerOption = {
